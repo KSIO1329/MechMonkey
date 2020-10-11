@@ -12612,8 +12612,8 @@ new vue__WEBPACK_IMPORTED_MODULE_0__["default"]();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\1uros\OneDrive\Documents\Projects\Web\mechmonkey-frontend\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\Users\1uros\OneDrive\Documents\Projects\Web\mechmonkey-frontend\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! E:\MechMonkey\mechmonkey-frontend\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! E:\MechMonkey\mechmonkey-frontend\src\app.scss */"./src/app.scss");
 
 
 /***/ })
