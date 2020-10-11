@@ -1,0 +1,37 @@
+{
+  "name": "mechmonkey-frontend",
+  "version": "1.0.0",
+  "description": "MechMonkey is a custom mechanical keyboard web shop. This repo is the frontend of the app developed in VueJS.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KSIO1329/MechMonkey-Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KSIO1329/MechMonkey-Frontend/issues"
+  },
+  "homepage": "https://github.com/KSIO1329/MechMonkey-Frontend#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.7",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.27.0",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "laravel-mix-alias": "^1.0.2"
+  }
+}
