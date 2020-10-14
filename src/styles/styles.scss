@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+// Import global variables
+@import "./variables.scss";
+
+// Update Bulma variables
+$navbar-background-color: $app-primary;
+$navbar-dropdown-arrow: $app-link;
+$navbar-item-color: $app-highlight;
+$navbar-item-hover-color: $app-link;
+$navbar-item-hover-background-color: white;
+$navbar-tab-active-color: $app-highlight;
+$navbar-tab-active-border-bottom-color: $app-link;
+$navbar-tab-hover-border-bottom-color: $app-link;
+
+// Import Bulma
+@import "../node_modules/bulma/bulma.sass";

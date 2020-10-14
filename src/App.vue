@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <Navbar/>
+    <Navbar />
     <router-view />
   </div>
 </template>
 
 <script>
-  import '@fortawesome/fontawesome-free/js/all.js';
-  
-  import Navbar from "@/components/Navbar";
-  export default {
+import "@fortawesome/fontawesome-free/js/all.js";
+
+import Navbar from "@/components/Navbar";
+export default {
   name: "App",
   components: {
     Navbar
@@ -18,6 +18,7 @@
 </script>
 
 <style lang="scss">
+@import "./styles/styles.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
