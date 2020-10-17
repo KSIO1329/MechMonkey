@@ -1,7 +1,7 @@
 <template>
   <div class="navbar is-fixed-top">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
+      <a class="navbar-item" href="/">
         <img src="https://media.discordapp.net/attachments/467681388796182538/766057052618358904/Mmonky-monstrosity.png" width="112" height="28" />
       </a>
       <a @click="clickBurger" role="button" class="navbar-burger burger" :class="{ 'is-active': burgerOpen }" aria-label="menu" aria-expanded="false" data-target="navbar-menu-id">
