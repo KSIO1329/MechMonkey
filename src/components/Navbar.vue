@@ -12,24 +12,22 @@
     </div>
     <div id="navbar-menu-id" class="navbar-menu" :class="{ 'is-active': burgerOpen }">
       <div class="navbar-start">
-        <router-link to="/" class="navbar-item is-tab" class-active="is-active" exact><i class="fas fa-home navbar-icon-left"></i> Home</router-link>
+        <router-link to="/" class="navbar-item is-tab" exact><i class="fas fa-home navbar-icon-left"></i> Home</router-link>
         <router-link to="/store" class="navbar-item is-tab"><i class="fas fa-store navbar-icon-left"></i> Store</router-link>
         <router-link to="/picker" class="navbar-item is-tab"><i class="fas fa-keyboard navbar-icon-left"></i> Part Picker </router-link>
         <router-link to="/about" class="navbar-item is-tab"><i class="far fa-question-circle navbar-icon-left"></i> About</router-link>
       </div>
       <div class="navbar-end">
-        <a v-if="!isLoggedIn" class="navbar-item"><i class="fas fa-sign-in-alt navbar-icon-left"></i> Log In</a>
+        <a v-if="!isLoggedIn" class="navbar-item" @click="logIn"><i class="fas fa-sign-in-alt navbar-icon-left"></i> Log In</a>
         <div v-else class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link"><i class="fas fa-user-circle navbar-icon-left"></i>Profile</a>
           <div class="navbar-dropdown">
             <a class="navbar-item"> My Profile <i class="fas fa-user-circle navbar-icon-right"></i></a>
             <a class="navbar-item"> Settings <i class="fas fa-cog navbar-icon-right"></i></a>
-            <a class="navbar-item"> Log Out <i class="fas fa-sign-out-alt navbar-icon-right"></i></a>
+            <a class="navbar-item" @click="logOut"> Log Out <i class="fas fa-sign-out-alt navbar-icon-right"></i></a>
           </div>
         </div>
-        <a class="navbar-item">
-          <i class="fas fa-shopping-cart"></i>
-        </a>
+        <router-link to="/cart" class="navbar-item is-tab"><i class="fas fa-shopping-cart"></i></router-link>
       </div>
     </div>
   </div>
@@ -40,7 +38,7 @@ export default {
   name: "Navbar",
   computed: {
     isLoggedIn() {
-      return true;
+      return this.$store.state.auth.status;
     }
   },
   data: function() {
@@ -51,6 +49,14 @@ export default {
   methods: {
     clickBurger() {
       this.burgerOpen = !this.burgerOpen;
+    },
+    // Open a modal for log in info
+    logIn() {
+      this.$store.dispatch("authLogIn");
+    },
+    // Open a modal for log out confirmation
+    logOut() {
+      this.$store.dispatch("authLogOut");
     }
   }
 };
