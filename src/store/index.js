@@ -4,12 +4,6 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    auth: {
-      status: false,
-      profile: {}
-    }
-  },
   mutations: {
     // Setting the auth status
     setAuthStatus(state, status) {
